@@ -1,0 +1,14 @@
+div.jpg1 img,
+div.jpg2 img,
+div.png img{
+	 width: 200px;
+	 height: 250px;
+	 margin: 50px;
+}
+div.jpg1,
+div.jpg2,
+div.png {
+	display: flex;
+}
+div.jpg2{flex-direction:row-reverse; }
+div.user{margin-top: 40px; font-size: 50px;}
