@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
+<<<<<<< HEAD
    // return view('welcome');
 	
 
@@ -23,3 +24,13 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+=======
+  // return view('welcome');
+	
+});
+Route::get('/','PageController@homefun')->name('homepage');
+Route::get('abouts','PageController@aboutfun')->name('aboutpage');
+Route::get('contacts','PageController@contactfun')->name('contactpage');
+
+
+>>>>>>> 1d4dc18327104ee452fb59e160172818238a8ec0
