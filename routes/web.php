@@ -15,5 +15,11 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
    // return view('welcome');
-	return "Hello Larave";
+	
+
 });
+//Route::resource('orders','OderController');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
