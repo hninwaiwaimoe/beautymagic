@@ -76,7 +76,7 @@ class PlanController extends Controller
     public function edit(Plan $plan)
     {
         $plans = Plan::all();
-        return view('backend.Plans.edit',compact('plans'));
+        return view('backend.plans.edit',compact('plans'));
     }
 
     /**
