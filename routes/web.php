@@ -12,8 +12,19 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/' ,function(){
 
-Route::get('/', function () {
-   // return view('welcome');
-	return "Hello Larave";
 });
+Route::get('main', 'PageController@mainfun')->name('mainpage');
+Route::resource('foodtypes','FoodtypeController');
+Route::resource('foods','FoodController');
+Route::resource('plans','PlanController');
+Route::resource('packages','PackageController');
+Route::resource('packagedetail','PackagedetailController');
+
+
+
+
+
+
+
