@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+<<<<<<< HEAD
 use App\Foodtype;
 use App\Package;
 
@@ -50,6 +51,23 @@ class PageController extends Controller
         
 
     } 
+=======
+
+class PageController extends Controller
+{
+      public function homefun($value='')
+  {
+    return view('frontend.home');
+  }
+  public function aboutfun($value='')
+  {
+    return view('frontend.about');
+  }
+  public function contactfun($value='')
+  {
+    return view('frontend.contact');
+  }
+>>>>>>> ebb38154be2ae44fbe3a8bed1971d416711190aa
     /**
      * Display a listing of the resource.
      *
@@ -67,8 +85,12 @@ class PageController extends Controller
      */
     public function create()
     {
+<<<<<<< HEAD
         return view('backend.package.create');
         
+=======
+        //
+>>>>>>> ebb38154be2ae44fbe3a8bed1971d416711190aa
     }
 
     /**

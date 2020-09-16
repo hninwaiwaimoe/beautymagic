@@ -33,7 +33,7 @@
 						<label class="col-sm-2 col-form-label">Project_id</label>
 						<div class="col-sm-5">
 
-							<input type="text" name="duration" class="form-control" value="">
+							<input type="text" name="project_id" class="form-control" value="">
 						</div>
 					</div>
 

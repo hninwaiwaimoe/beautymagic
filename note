@@ -1,0 +1,43 @@
+<div class="form-group">
+						
+						<div class="form-wrapper">
+							<label for="">Name</label>
+							<input type="text" class="form-control">
+						</div>
+					</div>
+					<div class="form-wrapper">
+						<label for="">Email</label>
+						<input type="text" class="form-control">
+					</div>
+					<div class="form-wrapper">
+						<label for="">Password</label>
+						<input type="password" class="form-control">
+					</div>
+					<div class="form-wrapper">
+						<label for="">Confirm Password</label>
+						<input type="password" class="form-control">
+					</div>
+
+
+					<div class="wrap-input100 validate-input m-b-20" data-validate="Enter username or email">
+					<input class="input100" type="text" name="username" placeholder="username or email">
+					<span class="focus-input100"></span>
+				</div>
+
+				<div class="wrap-input100 validate-input m-b-25" data-validate = "Enter password">
+					<input class="input100" type="password" name="pass" placeholder="password">
+					<span class="focus-input100"></span>
+				</div>
+<div class="container-login100-form-btn">
+					<button class="login100-form-btn">
+						Sign In
+					</button>
+				</div>
+
+
+
+About Us
+
+	We want to help you to live a fit & healthy life Style!
+We do this by helping you find the most suitable things for your home fitness by keeping your butget,lifestyle and to reach the goal in your mind.We stock some healthy & beauty plans,so you can train with us until you reach your goal.Our awesome team is always keen to help.
+   ***SO Don't Forget to call us to discuss your needs***

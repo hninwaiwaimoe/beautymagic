@@ -3,7 +3,7 @@
 <div class="container-fluid">
 
 	<div class="d-sm-flex align-items-center justify-content-between mb-4">
-		<h1 class="h3 mb-0 text-gray-800">Category List</h1>
+		<h1 class="h3 mb-0 text-gray-800">Package List</h1>
 		
 
 	</div>
@@ -13,7 +13,8 @@
 				<thead class="thead-dark ">
 					<th>No</th>
 					<th>Name</th>
-					<th>Photo</th>
+					<th>Duration</th>
+					<th>Plan_id</th>
 					<th>Action</th>
 				</thead>
 				<tbody class="text-info">
@@ -22,14 +23,15 @@
 					$i=1;
 					@endphp
 
-					@foreach($categories as $category) 
+					@foreach($packages as $package) 
 					<tr>
 						<td>{{$i++}}</td>
-						<td>{{$category->name}}</td>
-						<td><img src="{{asset($category->photo)}}" class="img-fluid w-50"></td>
+						<td>{{$package->name}}</td>
+						<td>{{$package->duration}}</td>
+						<td>{{$package->plan_id}}</td>
 						<td>
 							<a href="" class="btn btn-primary">Detail</a>
-							<a href="{{route('categories.edit',$category->id)}}" class="btn btn-warning">Edit</a>
+							<a href="{{route('packages.edit',$package->id)}}" class="btn btn-warning">Edit</a>
 							<a href="" class="btn btn-danger">Delete</a>
 
 						</td>
@@ -37,7 +39,7 @@
 					@endforeach
 				</tbody>
 			</table>
-			<a href="{{route('categories.create')}}"class="btn btn-secondary my-3">Add New</a>
+			<a href="{{route('packages.create')}}"class="btn btn-secondary my-3">Add New</a>
 		
 		</div>
 	</div>
