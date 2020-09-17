@@ -1,22 +1,17 @@
 <?php
-
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
-<<<<<<< HEAD
 use App\Foodtype;
 use App\Package;
 
 
-class PageController extends Controller
+  class PageController extends Controller
 {
-     
-    public function mainfun($value='')
+      public function mainfun($value='')
     {
         //$foodtypes=Foodtype::all();    
     return view('backend.main');
     }
-
     public function foodtypesfun($id)
     {   
         /*$route = Route::current();*/
@@ -25,8 +20,8 @@ class PageController extends Controller
         //
         $foodtypes=Foodtype::all();
         return view('foodtypes',compact('foodtypes'));
-        
 
+        
     } 
      public function foodsfun($id)
     {   
@@ -36,10 +31,9 @@ class PageController extends Controller
         //
         $foods=Food::all();
         return view('foods',compact('foods'));
-        
 
+        
     } 
-     
      public function packagesfun($id)
     {   
         /*$route = Route::current();*/
@@ -48,15 +42,13 @@ class PageController extends Controller
         //
         $packages=Package::all();
         return view('packages',compact('packages'));
+
         
-
     } 
-=======
 
-class PageController extends Controller
-{
       public function homefun($value='')
   {
+
     return view('frontend.home');
   }
   public function aboutfun($value='')
@@ -67,7 +59,24 @@ class PageController extends Controller
   {
     return view('frontend.contact');
   }
->>>>>>> ebb38154be2ae44fbe3a8bed1971d416711190aa
+   public function loginfun($value='')
+  {
+    return view('frontend.login');
+  }
+   public function registerfun($value='')
+  {
+    return view('frontend.register');
+  }
+   public function planfun($value='')
+  {
+    return view('frontend.plan');
+  }
+  public function bmifun($value='')
+  {
+    return view('frontend.bmi');
+  }
+
+
     /**
      * Display a listing of the resource.
      *
@@ -77,7 +86,6 @@ class PageController extends Controller
     {
         //
     }
-
     /**
      * Show the form for creating a new resource.
      *
@@ -85,14 +93,11 @@ class PageController extends Controller
      */
     public function create()
     {
-<<<<<<< HEAD
-        return view('backend.package.create');
-        
-=======
-        //
->>>>>>> ebb38154be2ae44fbe3a8bed1971d416711190aa
-    }
 
+        return view('backend.package.create');
+
+
+    }
     /**
      * Store a newly created resource in storage.
      *
@@ -103,7 +108,6 @@ class PageController extends Controller
     {
         //
     }
-
     /**
      * Display the specified resource.
      *
@@ -114,7 +118,6 @@ class PageController extends Controller
     {
         //
     }
-
     /**
      * Show the form for editing the specified resource.
      *
@@ -125,7 +128,6 @@ class PageController extends Controller
     {
         //
     }
-
     /**
      * Update the specified resource in storage.
      *
@@ -137,7 +139,6 @@ class PageController extends Controller
     {
         //
     }
-
     /**
      * Remove the specified resource from storage.
      *

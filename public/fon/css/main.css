@@ -5,15 +5,15 @@
 /*//////////////////////////////////////////////////////////////////
 [ FONT ]*/
 div.jpg1 img{
-  width: 180px;
-  height: 180px;
+  width: 200px;
+  height: 200px;
   margin: 50px;
 }
 div.jpg1,
 {
   display: flex;
 }
-div.user{margin-top: 50px; font-size: 50px; }
+div.user{margin-top: 50px; font-size: 80px; }
 @font-face {
   font-family: Poppins-Regular;
   src: url('../fonts/poppins/Poppins-Regular.ttf'); 

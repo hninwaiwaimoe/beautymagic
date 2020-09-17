@@ -17,7 +17,7 @@ class CreateFoodTable extends Migration
             $table->id();
              $table->string('name');
             $table->integer('kalorie');
-            $table->varchar('vitamin');
+            $table->string('vitamin');
 
             $table->timestamps();
         });

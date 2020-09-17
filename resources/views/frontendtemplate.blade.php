@@ -1,113 +1,372 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Yogalax - Free Bootstrap 4 Template by Colorlib</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
-    <link href="https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+<html lang="zxx">
 
-    <link rel="stylesheet" href="{{asset('front/css/open-iconic-bootstrap.min.css')}}">
-    <link rel="stylesheet" href="{{asset('front/css/animate.css')}}">
-    
-    <link rel="stylesheet" href="{{asset('front/css/owl.carousel.min.css')}}">
-    <link rel="stylesheet" href="{{asset('front/css/owl.theme.default.min.css')}}">
-    <link rel="stylesheet" href="{{asset('front/css/magnific-popup.css')}}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Directing Template">
+    <meta name="keywords" content="Directing, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>BeautyMagic | Template</title>
 
-    <link rel="stylesheet" href="{{asset('front/css/aos.css')}}">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="{{asset('front/css/ionicons.min.css')}}">
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="{{asset('front/css/bootstrap.min.css')}}" type="text/css">
+    <link rel="stylesheet" href="{{asset('front/css/font-awesome.min.css')}}" type="text/css">
+    <link rel="stylesheet" href="{{asset('front/css/elegant-icons.css')}}" type="text/css">
+    <link rel="stylesheet" href="{{asset('front/css/nice-select.css')}}" type="text/css">
+    <link rel="stylesheet" href="{{asset('front/css/barfiller.css')}}" type="text/css">
+    <link rel="stylesheet" href="{{asset('front/css/owl.carousel.min.css')}}" type="text/css">
+    <link rel="stylesheet" href="{{asset('front/css/slicknav.min.css')}}" type="text/css">
+    <link rel="stylesheet" href="{{asset('front/css/style.css')}}" type="text/css">
+    <link rel="icon" type="image/png" href="{{asset('fon/images/icons/favicon.ico')}}"/>
+<!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{{asset('fon/vendor/bootstrap/css/bootstrap.min.css')}}">
+<!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{{asset('fon/fonts/font-awesome-4.7.0/css/font-awesome.min.css')}}">
+<!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{{asset('fon/vendor/animate/animate.css')}}">
+<!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{{asset('fon/vendor/css-hamburgers/hamburgers.min.css')}}">
+<!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{{asset('fon/vendor/animsition/css/animsition.min.css')}}">
+<!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{{asset('fon/vendor/select2/select2.min.css')}}">
+<!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{{asset('fon/vendor/daterangepicker/daterangepicker.css')}}">
+<!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{{asset('fon/css/util.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('fon/css/main.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{asset('fon/css/asiangement.css')}}">
+<!--===============================================================================================-->
 
-    <link rel="stylesheet" href="{{asset('front/css/bootstrap-datepicker.css')}}">
-    <link rel="stylesheet" href="{{asset('front/css/jquery.timepicker.css')}}">
+</head>
 
-    
-    <link rel="stylesheet" href="{{asset('front/css/flaticon.css')}}">
-    <link rel="stylesheet" href="{{asset('front/css/icomoon.css')}}">
-    <link rel="stylesheet" href="{{asset('front/css/style.css')}}">
-  </head>
-  <body>
-    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
-        <div class="container">
-          <a class="navbar-brand" href="index.html"><span class="flaticon-lotus"></span>Beauty Magic(fitness for womoen)</a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="oi oi-menu"></span> Menu
-          </button>
-          <div class="collapse navbar-collapse" id="ftco-nav">
-            <ul class="navbar-nav ml-auto">
-              <li class="nav-item active"><a href="{{'homepage'}}" class="nav-link">Home</a></li>
-              <li class="nav-item"><a href="{{('abouts')}}" class="nav-link">About us</a></li>
-              <li class="nav-item"><a href="about.html" class="nav-link">Get Start</a></li>
-              <li class="nav-item"><a href="{{('contacts')}}" class="nav-link">Contact</a></li>
-              <li class="nav-item"><a href="#" class="nav-link">Login</a></li>
+<body>
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
 
-            <li class="nav-item"><a href="#" class="nav-link">Plans</a>
-                   
-                </li>
+    <!-- Offcanvas Menu Begin -->
+    <div class="offcanvas-menu-overlay"></div>
+    <div class="offcanvas-menu">
+        <div class="offcanvas__logo">
+            <a href="./index.html"><img src="{{asset('front/img/logo.png')}}" alt=""></a>
+        </div>
+        <div id="mobile-menu-wrap"></div>
+        <div class="offcanvas__widget">
+            <ul>
+                <li>CALL US: + 959787538365</li>
+                <li>WRITE US: FITNESS@EXAMPLE.COM</li>
+                <li>OPENING TIMES: MON - FRI: 9:00 - 19:00</li>
             </ul>
-          </div>
-          </div>
-      </nav>
-      @yield('content')
-    <!-- END nav -->
-    <footer class="ftco-footer ftco-section img">
-        <div class="overlay"></div>
-      <div class="container">
-        <div class="row mb-5">
-            <div class="col-lg-3 col-md-6 mb-5 mb-md-5 ftco-animate">
-            <div class="ftco-footer-widget mb-4">
-              <h1 class="logo">Yogalax</h1>
-            </div>
-          </div>
-          <div class="col-lg col-md-6 mb-5 mb-md-5 ftco-animate">
-            <div class="ftco-footer-widget mb-4">
-              <h2 class="location">203 Fake St. Mountain View, San Francisco, California, USA</h2>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6 mb-5 mb-md-5">
-            <div class="ftco-footer-widget mb-4">
-              <ul class="ftco-footer-social list-unstyled float-md-left float-lft">
-                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
-                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
-                <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
-              </ul>
-            </div>
-          </div>
+            <a href="{{route('contactpage')}}" class="primary-btn">JOIN US</a>
         </div>
-        <div class="row">
-          <div class="col-md-12 text-center">
+        <nav class="header__menu">
+            <ul class="mobile-menu">
+                <li class="nav-link"><a href="{{route('homepage')}}">Home</a></li>
+                <li><a href="{{route('aboutpage')}}" class="nav-link">About</a></li>
+                <li><a href="{{route('planpage')}}">Plans</a>
+                    <ul class="dropdown">
+                        <li><a href="#">Exercises</a></li>
+                        <li><a href="#">Keto Diet Plans</a></li>
+                    </ul>
+                </li>
+                <li><a href="{{route('contactpage')}}">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="offcanvas__social">
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-instagram"></i></a>
+            <a href="#"><i class="fa fa-linkedin"></i></a>
+        </div>
+    </div>
+    <!-- Offcanvas Menu End -->
 
-            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
-          </div>
+    <!-- Header Section Begin -->
+    <header class="header">
+        <div class="header__top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-3">
+                        <div class="header__logo">
+                            <a href="#"><img src="asset{{('front/img/logo.png')}}" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-9 col-md-9">
+                        <div class="header__top__widget">
+                            <ul>
+                                <li>CALL US: + 1 800-567-8990</li>
+                                <li>WRITE US: OFFICE@EXAMPLE.COM</li>
+                                <li>OPENING TIMES: MON - FRI: 9:00 - 19:00</li>
+                            </ul>
+                            <a href="#" class="primary-btn">JOIN US</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="canvas__open">
+                    <i class="fa fa-bars"></i>
+                </div>
+            </div>
         </div>
-      </div>
-    </footer>
-    
+        <div class="header__nav">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-9 col-md-9">
+                        <nav class="header__menu">
+                            <ul>
+                                <li class="nav-link"><a href="#">Home</a></li>
+                                <li><a href="{{route('aboutpage')}}" class="nav-link">About</a></li>
+                        <li><a href="{{route('planpage')}}" class="nav-link">Plans</a>
+                                    <ul class="dropdown">
+                                        <li><a href="#">Exercise</a></li>
+                                        <li><a href="#">Keto Diet Plan</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="{{route('contactpage')}}" class="nav-link">Contact</a></li>
+                                 <li><a href="{{route('loginpage')}}" class="nav-link">Login</a></li>
+                                  <li><a href="{{route('registerpage')}}" class="nav-link">Register</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="col-lg-3 col-md-3">
+                        <div class="header__social">
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                            <a href="#"><i class="fa fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Header Section End -->
+
+    <!-- Hero Section Begin -->
+    <section class="hero">
+        <div class="hero__sliders owl-carousel">
+            <div class="hero__items set-bg" data-setbg="{{asset('front/img/hero/hero-1.jpg')}}">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <div class="hero__text">
+                                <span>Welcome to Beauty Magic</span>
+                                <h2>What hurts today makes you stronger tomorrow</h2>
+                                <a href="#" class="primary-btn">DISCOVER MORE</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero__items set-bg" data-setbg="{{asset('front/img/hero/hero-1.jpg')}}">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <div class="hero__text">
+                                <span>Welcome to Beauty Magic</span>
+                                <h2>What hurts today makes you stronger tomorrow</h2>
+                                <a href="#" class="primary-btn">DISCOVER MORE</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Hero Section End -->
+
+  @yield('content')
+
+    <!-- Services Section Begin -->
+    <section class="services spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title">
+                        <img src="{{asset('front/img/icon.png')}}" alt="">
+                        <h2>Enjoy All Aspects Of Yoga</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="services__list">
+                <div class="row">
+                    <div class="col-xl-2 col-md-4 col-sm-6">
+                        <div class="services__item">
+                            <img src="{{asset('front/img/services/services-1.png')}}" alt="">
+                            <h5>Asana</h5>
+                            <p>Grab the opportunity to deepen your own yoga practice, relax, restore and experience
+                                india!</p>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-md-4 col-sm-6">
+                        <div class="services__item">
+                            <img src="{{asset('front/img/services/services-2.png')}}" alt="">
+                            <h5>Meditation</h5>
+                            <p>Grab the opportunity to deepen your own yoga practice, relax, restore and experience
+                                india!</p>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-md-4 col-sm-6">
+                        <div class="services__item">
+                            <img src="{{asset('front/img/services/services-3.png')}}" alt="">
+                            <h5>Mudra</h5>
+                            <p>Grab the opportunity to deepen your own yoga practice, relax, restore and experience
+                                india!</p>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-md-4 col-sm-6">
+                        <div class="services__item">
+                            <img src="{{asset('front/img/services/services-4.png')}}" alt="">
+                            <h5>Bandhas</h5>
+                            <p>Grab the opportunity to deepen your own yoga practice, relax, restore and experience
+                                india!</p>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-md-4 col-sm-6">
+                        <div class="services__item">
+                            <img src="{{asset('front/img/services/services-5.png')}}" alt="">
+                            <h5>Philosophy</h5>
+                            <p>Grab the opportunity to deepen your own yoga practice, relax, restore and experience
+                                india!</p>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-md-4 col-sm-6">
+                        <div class="services__item">
+                            <img src="{{asset('front/img/services/services-6.png')}}" alt="">
+                            <h5>Pranayama</h5>
+                            <p>Grab the opportunity to deepen your own yoga practice, relax, restore and experience
+                                india!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Services Section End -->
+
   
+    <!-- Footer Section Begin -->
+    <section class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="footer__about">
+                        <img src="{{asset('front/img/footer-logo.png')}}" alt="">
+                        <ul>
+                            <li><i class="fa fa-clock-o"></i> Mon - Fri: 6:30am - 07:45pm</li>
+                            <li><i class="fa fa-clock-o"></i> Sat - Sun: 8:30am - 05:45pm</li>
+                        </ul>
+                        <form action="#" class="subscribe-form">
+                            <input type="text" placeholder="Your Email">
+                            <button type="submit"><i class="fa fa-send"></i></button>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-2 offset-lg-1 col-md-3 col-sm-6">
+                    <div class="footer__widget">
+                        <h5>Inspiration</h5>
+                        <ul>
+                            <li><a href="#">Online Pilates</a></li>
+                            <li><a href="#">Yoga for Beginners</a></li>
+                            <li><a href="#">Online Pilates</a></li>
+                            <li><a href="#">Online Yoga</a></li>
+                            <li><a href="#">Conditioning</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-6">
+                    <div class="footer__widget">
+                        <h5>About Us</h5>
+                        <ul>
+                            <li><a href="#">Our Vision</a></li>
+                            <li><a href="#">Our Mission</a></li>
+                            <li><a href="#">Meet The Team</a></li>
+                            <li><a href="#">Introduce</a></li>
+                            <li><a href="#">Customer Service</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="footer__widget">
+                        <h5>Contact Us</h5>
+                        <ul class="footer-address">
+                            <li><i class="fa fa-phone"></i> (01) 436 8888</li>
+                            <li><i class="fa fa-envelope"></i> hello@beautymagic.com</li>
+                            <li><i class="fa fa-location-arrow"></i> 828 Granville Lights Suite 466</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__copyright">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        <div class="footer__copyright__text">
+                            <p>Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a></p>
+                        </div>
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+                        <div class="footer__copyright__social">
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer Section End -->
 
-  <!-- loader -->
-  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+    <!-- Js Plugins -->
+    <script src="{{asset('front/js/jquery-3.3.1.min.js')}}"></script>
+    <script src="{{asset('front/js/bootstrap.min.js')}}"></script>
+    <script src="{{asset('front/js/jquery.nice-select.min.js')}}"></script>
+    <script src="{{asset('front/js/jquery.barfiller.js')}}"></script>
+    <script src="{{asset('front/js/jquery.slicknav.js')}}"></script>
+    <script src="{{asset('front/js/owl.carousel.min.js')}}"></script>
+    <script src="{{asset('front/js/main.js')}}"></script>
+    <script src="{{asset('fon/vendor/jquery/jquery-3.2.1.min.js')}}"></script>
+<!--===============================================================================================-->
+    <script src="{{asset('fon/vendor/animsition/js/animsition.min.js')}}"></script>
+<!--===============================================================================================-->
+    <script src="{{asset('fon/vendor/bootstrap/js/popper.js')}}"></script>
+    <script src="{{asset('fon/vendor/bootstrap/js/bootstrap.min.js')}}"></script>
+<!--===============================================================================================-->
+    <script src="{{asset('fon/vendor/select2/select2.min.js')}}"></script>
+    <script>
+        $(".selection-2").select2({
+            minimumResultsForSearch: 20,
+            dropdownParent: $('#dropDownSelect1')
+        });
+    </script>
+<!--===============================================================================================-->
+    <script src="{{asset('fon/vendor/daterangepicker/moment.min.js')}}"></script>
+    <script src="{{asset('fon/vendor/daterangepicker/daterangepicker.js')}}"></script>
+<!--===============================================================================================-->
+    <script src="{{asset('fon/vendor/countdowntime/countdowntime.js')}}"></script>
+<!--===============================================================================================-->
+    <script src="{{asset('fon/js/main.js')}}"></script>
 
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-  <script src="{{asset('front/js/jquery.min.js')}}"></script>
-  <script src="{{asset('front/js/jquery-migrate-3.0.1.min.js')}}"></script>
-  <script src="{{asset('front/js/popper.min.js')}}"></script>
-  <script src="{{asset('front/js/bootstrap.min.js')}}"></script>
-  <script src="{{asset('front/js/jquery.easing.1.3.js')}}"></script>
-  <script src="{{asset('front/js/jquery.waypoints.min.js')}}"></script>
-  <script src="{{asset('front/js/jquery.stellar.min.js')}}"></script>
-  <script src="{{asset('front/js/owl.carousel.min.js')}}"></script>
-  <script src="{{asset('front/js/jquery.magnific-popup.min.js')}}"></script>
-  <script src="{{asset('front/js/aos.js')}}"></script>
-  <script src="{{asset('front/js/jquery.animateNumber.min.js')}}"></script>
-  <script src="{{asset('front/js/bootstrap-datepicker.js')}}"></script>
-  <script src="{{asset('front/js/jquery.timepicker.min.js')}}"></script>
-  <script src="{{asset('front/js/scrollax.min.js')}}"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-  <script src="{{asset('front/js/google-map.js')}}"></script>
-  <script src="{{asset('front/js/main.js')}}"></script>
-    
-  </body>
+  gtag('config', 'UA-23581568-13');
+</script>
+
+</body>
+
 </html>

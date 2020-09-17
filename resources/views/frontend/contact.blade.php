@@ -1,4 +1,4 @@
-@extends('master')
+@extends('frontendtemplate')
 @section('content')
 	<div class="container-contact100">
 		<div class="wrap-contact100">
