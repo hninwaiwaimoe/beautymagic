@@ -17,6 +17,7 @@
 
   <!-- Custom styles for this template-->
   <link href="{{asset('fan/css/sb-admin-2.min.css')}}" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css">
 
 </head>
 
@@ -374,22 +375,23 @@
   </div>
 
   <!-- Bootstrap core JavaScript-->
-  <script src="{{asset('backend/vendor/vendor/jquery/jquery.min.js')}}"></script>
+  <script src="{{asset('backend/vendor/jquery/jquery.min.js')}}"></script>
   <script src="{{asset('backend/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
 
   <!-- Core plugin JavaScript-->
-  <script src="{{asset('fan/vendor/jquery-easing/jquery.easing.min.js')}}"></script>
+  <script src="{{asset('backend/vendor/jquery-easing/jquery.easing.min.js')}}"></script>
 
   <!-- Custom scripts for all pages-->
-  <script src="{{asset('fan/js/sb-admin-2.min.js')}}"></script>
+  <script src="{{asset('backend/js/sb-admin-2.min.js')}}"></script>
 
   <!-- Page level plugins -->
-  <script src="{{asset('fan/vendor/chart.js/Chart.min.js')}}"></script>
+  <script src="{{asset('backend/vendor/chart.js/Chart.min.js')}}"></script>
 
   <!-- Page level custom scripts -->
-  <script src="{{asset('fan/js/demo/chart-area-demo.js')}}"></script>
-  <script src="{{asset('fan/js/demo/chart-pie-demo.js')}}"></script>
-
+  <script src="{{asset('backend/js/demo/chart-area-demo.js')}}"></script>
+  <script src="{{asset('backend/js/demo/chart-pie-demo.js')}}"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
+  @yield('script')
 </body>
 
 </html>

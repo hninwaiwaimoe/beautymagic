@@ -14,24 +14,12 @@
 	<div class="form-group row">
 		<label for="name" class="col-sm-2 col-form-label">Name</label>
 		<div class="col-sm-8">
-			<input type="text" class="form-control" id="name" name="name">
-			{{-- <span class="text-danger">{{$error->first('name')}}</span> --}}
+		<input type="text" class="form-control" id="name" name="name">
+			
 		</div>
 	</div>
-	<div class="form-group row">
-		<label for="file" class="col-sm-2 col-form-label">Unit</label>
-		<div class="col-sm-8">
-			<input type="text" class="" id="unit" name="unit">
-			{{-- <span class="text-danger">{{$error->first('photo')}}</span> --}}
-		</div>
-	</div>
-		<div class="form-group row">
-		<label for="file" class="col-sm-2 col-form-label">Description</label>
-		<div class="col-sm-8">
-			<input type="text" class="" id="description" name="description">
-			{{-- <span class="text-danger">{{$error->first('photo')}}</span> --}}
-		</div>
-	</div>
+	
+	
 	
 	<div>
 		<div class="col-sm-6">

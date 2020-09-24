@@ -6,6 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class FoodType extends Model
 {
-        protected $fillable=['id','name','unit'];
+        protected $fillable=['id','name'];
 
 }

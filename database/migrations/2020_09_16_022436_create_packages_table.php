@@ -16,13 +16,14 @@ class CreatePackagesTable extends Migration
         Schema::create('packages', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->integer('duration');
+            $table->string('duration');
+            $table->integer('price');
             $table->unsignedBigInteger('plan_id');
             $table->timestamps();
             $table->foreign('plan_id')
-                    ->references('id')
-                    ->on('plans')
-                    ->onDelete('cascade');
+            ->references('id')
+            ->on('plans')
+            ->onDelete('cascade');
         });
     }
 

@@ -67,15 +67,11 @@
         </div>
         <nav class="header__menu">
             <ul class="mobile-menu">
-                <li class="nav-link"><a href="{{route('homepage')}}">Home</a></li>
+                <li class="nav-link"><a href="/">Home</a></li>
                 <li><a href="{{route('aboutpage')}}" class="nav-link">About</a></li>
                 <li><a href="{{route('planpage')}}">Plans</a>
-                    <ul class="dropdown">
-                        <li><a href="#">Exercises</a></li>
-                        <li><a href="#">Keto Diet Plans</a></li>
-                    </ul>
+                    
                 </li>
-                <li><a href="{{route('contactpage')}}">Contact</a></li>
             </ul>
         </nav>
         <div class="offcanvas__social">
@@ -119,17 +115,15 @@
                     <div class="col-lg-9 col-md-9">
                         <nav class="header__menu">
                             <ul>
-                                <li class="nav-link"><a href="#">Home</a></li>
+                                <li class="nav-link"><a href="/">Home</a></li>
                                 <li><a href="{{route('aboutpage')}}" class="nav-link">About</a></li>
                         <li><a href="{{route('planpage')}}" class="nav-link">Plans</a>
-                                    <ul class="dropdown">
-                                        <li><a href="#">Exercise</a></li>
-                                        <li><a href="#">Keto Diet Plan</a></li>
-                                    </ul>
+                                    
                                 </li>
-                                <li><a href="{{route('contactpage')}}" class="nav-link">Contact</a></li>
                                  <li><a href="{{route('loginpage')}}" class="nav-link">Login</a></li>
                                   <li><a href="{{route('registerpage')}}" class="nav-link">Register</a></li>
+                                   <li><a href="{{route('bmipage')}}" class="nav-link">Calculator</a></li>
+                                    <li><a href="{{route('contactpage')}}">Contact</a></li>
                             </ul>
                         </nav>
                     </div>
@@ -181,77 +175,6 @@
     <!-- Hero Section End -->
 
   @yield('content')
-
-    <!-- Services Section Begin -->
-    <section class="services spad">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="section-title">
-                        <img src="{{asset('front/img/icon.png')}}" alt="">
-                        <h2>Enjoy All Aspects Of Yoga</h2>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="container-fluid">
-            <div class="services__list">
-                <div class="row">
-                    <div class="col-xl-2 col-md-4 col-sm-6">
-                        <div class="services__item">
-                            <img src="{{asset('front/img/services/services-1.png')}}" alt="">
-                            <h5>Asana</h5>
-                            <p>Grab the opportunity to deepen your own yoga practice, relax, restore and experience
-                                india!</p>
-                        </div>
-                    </div>
-                    <div class="col-xl-2 col-md-4 col-sm-6">
-                        <div class="services__item">
-                            <img src="{{asset('front/img/services/services-2.png')}}" alt="">
-                            <h5>Meditation</h5>
-                            <p>Grab the opportunity to deepen your own yoga practice, relax, restore and experience
-                                india!</p>
-                        </div>
-                    </div>
-                    <div class="col-xl-2 col-md-4 col-sm-6">
-                        <div class="services__item">
-                            <img src="{{asset('front/img/services/services-3.png')}}" alt="">
-                            <h5>Mudra</h5>
-                            <p>Grab the opportunity to deepen your own yoga practice, relax, restore and experience
-                                india!</p>
-                        </div>
-                    </div>
-                    <div class="col-xl-2 col-md-4 col-sm-6">
-                        <div class="services__item">
-                            <img src="{{asset('front/img/services/services-4.png')}}" alt="">
-                            <h5>Bandhas</h5>
-                            <p>Grab the opportunity to deepen your own yoga practice, relax, restore and experience
-                                india!</p>
-                        </div>
-                    </div>
-                    <div class="col-xl-2 col-md-4 col-sm-6">
-                        <div class="services__item">
-                            <img src="{{asset('front/img/services/services-5.png')}}" alt="">
-                            <h5>Philosophy</h5>
-                            <p>Grab the opportunity to deepen your own yoga practice, relax, restore and experience
-                                india!</p>
-                        </div>
-                    </div>
-                    <div class="col-xl-2 col-md-4 col-sm-6">
-                        <div class="services__item">
-                            <img src="{{asset('front/img/services/services-6.png')}}" alt="">
-                            <h5>Pranayama</h5>
-                            <p>Grab the opportunity to deepen your own yoga practice, relax, restore and experience
-                                india!</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Services Section End -->
-
-  
     <!-- Footer Section Begin -->
     <section class="footer">
         <div class="container">

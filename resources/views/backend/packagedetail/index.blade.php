@@ -12,29 +12,28 @@
 			<table class="table table-bordered  justify-content-center text-lg-center">
 				<thead class="thead-dark ">
 					<th>No</th>
-					<th>Food_id</th>
 					<th>Package_id</th>
 					<th>Kind</th>
-					<th>Quantity</th>
-					<th>BMI</th>
-				</thead>
+					</thead>
 				<tbody class="text-info">
 
 					@php
 					$i=1;
 					@endphp
 
-					@foreach($categories as $category) 
+					@foreach($packagedetails->package as $packagedetail) 
 					<tr>
 						<td>{{$i++}}</td>
-						<td>{{$packagedetail->}}</td>
+						<td>{{$packagedetail->package->id}}</td>
 						<td>{{$packagedetail->kind}}</td>
-						<td>{{$packagedetail->quantiry}}</td>
-						<td>{{$packagedetail->bmi}}</td>
 						<td>
-							<a href="" class="btn btn-primary">Detail</a>
-							<a href="{{route('categories.edit',$category->id)}}" class="btn btn-warning">Edit</a>
-							<a href="" class="btn btn-danger">Delete</a>
+							<a href="{{route('packages.show',$package->id)}}" class="btn btn-primary">Detail</a>
+							<a href="{{route('packages.edit',$package->id)}}" class="btn btn-warning">Edit</a>
+							<form action="{{route('packages.destory',$package->id)}}" method="post" class="d-inline-block">
+								@csrf
+								@method('DELETE')
+							<input type="submit" class="btn btn-danger" value="Delete">
+							</form>
 
 						</td>
 					</tr>

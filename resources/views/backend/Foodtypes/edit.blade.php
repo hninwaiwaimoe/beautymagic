@@ -19,13 +19,6 @@
 			{{-- <span class="text-danger">{{$error->first('name')}}</span> --}}
 		</div>
 	</div>
-	<div class="form-group row">
-		<label for="file" class="col-sm-2 col-form-label">Unit</label>
-		<div class="col-sm-8">
-			<input type="text" class="form-control" id="unit" name="unit" value="{{$foodtype->unit}}">
-			{{-- <span class="text-danger">{{$error->first('photo')}}</span> --}}
-		</div>
-	</div>
 	
 	
 	<div>

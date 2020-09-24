@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Foodtype;
 use App\Food;
 use Illuminate\Http\Request;
 
@@ -25,7 +25,8 @@ class FoodController extends Controller
      */
     public function create()
     {
-        return view('backend.foods.create');
+        $foodtypes=Foodtype::all();
+        return view('backend.foods.create',compact('foodtypes'));
     }
 
     /**
@@ -38,8 +39,10 @@ class FoodController extends Controller
     {
         $request->validate([
             "name" => 'required',
+            "foodtype" => 'required',
             "kalorie" => 'required',
-            "vitamin" => 'required'
+            "vitamin" => 'required',
+
             
         ]);
         
@@ -50,6 +53,7 @@ class FoodController extends Controller
         $food->kalorie = $request->kalorie;
         $food->vitamin = $request->vitamin;
        
+        $food->foodtype_id =$request->foodtype;
         $food->save();
 
         //redirect
@@ -75,8 +79,9 @@ class FoodController extends Controller
      */
     public function edit(Food $food)
     {
+        $foodtypes = Foodtype::all();
         
-        return view('backend.foods.edit',compact('food'));
+        return view('backend.foods.edit',compact('food','foodtypes'));
     }
 
     /**
@@ -88,10 +93,12 @@ class FoodController extends Controller
      */
     public function update(Request $request, Food $food)
     {
-         $request->validate([
+          $request->validate([
             "name" => 'required',
+            "foodtype"=>'required',
             "kalorie" => 'required',
-            "vitamin" => 'required'
+            "vitamin" => 'required',
+
             
         ]);
         
@@ -101,6 +108,7 @@ class FoodController extends Controller
         $food->kalorie = $request->kalorie;
         $food->vitamin = $request->vitamin;
        
+        $food->foodtype_id =$request->foodtype;
         $food->save();
 
         //redirect
@@ -115,6 +123,6 @@ class FoodController extends Controller
      */
     public function destroy(Food $food)
     {
-        $foods->delete();
-        return redirect()->route('$foods.index');   }
+        $food->delete();
+        return redirect()->route('foods.index');   }
 }

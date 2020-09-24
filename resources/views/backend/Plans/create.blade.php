@@ -11,6 +11,7 @@
 
 	@csrf	
 
+	
 	<div class="form-group row">
 		<label for="name" class="col-sm-2 col-form-label">Name</label>
 		<div class="col-sm-8">
@@ -18,11 +19,10 @@
 			{{-- <span class="text-danger">{{$error->first('name')}}</span> --}}
 		</div>
 	</div>
-	
 	<div class="form-group row">
-		<label for="name" class="col-sm-2 col-form-label">Description</label>
+		<label for="description" class="col-sm-2 col-form-label">Description</label>
 		<div class="col-sm-8">
-			<input type="text" class="form-control" id="description" name="description">
+			<textarea name="description" class="form-control"></textarea>
 			{{-- <span class="text-danger">{{$error->first('name')}}</span> --}}
 		</div>
 	</div>

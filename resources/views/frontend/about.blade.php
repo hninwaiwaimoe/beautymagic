@@ -1,7 +1,8 @@
-@extends('frontendtemplate')
+@extends('master')
 @section('content')
- <div class="jpg1">
-		<img src="{{asset('front/img/image_3.jpg')}}">
+ 
+<div class="jpg1">
+		<img src="{{asset('front/images/image_3.jpg')}}">
 		<div class="user"><h2>About Us</h2>
 <p>We want to help you to live a fit & healthy life Style!
 We do this by helping you find the most suitable things for your home fitness by keeping your butget,lifestyle and to reach the goal in your mind.We stock some healthy & beauty plans,so you can train with us until you reach your goal.Our awesome team is always keen to help.
@@ -9,7 +10,7 @@ We do this by helping you find the most suitable things for your home fitness by
 Aa</p>
   </div></div>
   <div class="jpg2">
-		<img src="{{asset('front/img/keto_2.jpg')}}">
+		<img src="{{asset('front/images/keto_2.jpg')}}">
 		<div class="user"><h2>What is a keto meal?</h2>
 			<ul class="pricing-text mb-5">
 <li><p>A keto meal is one that contains under 50 g of total carbs or contributes about 30 g of net carbs per day. Net carbs are total carbs minus the fiber.</p>
@@ -29,7 +30,7 @@ Aa</p>
   </div>
 </div>
 <div class="png">
-		<img src="{{asset('front/img/program-5.jpg')}}">
+		<img src="{{asset('front/images/program-5.jpg')}}">
 		<div class="user"><h2>7 Reasons You Should Start Doing Yoga Immediately</h2>
 <p>Yoga is an ancient practice with origins stretching back thousands of years in India. It is designed to help achieve a more positive outlook on life and a focused, permanent sense of serenity and peace. The word ‘yoga’ itself means ‘union’ and ‘union with the divine’; however, many people have stripped away the spirituality and focus of yoga so that most think of it as a group of intensely athletic people putting their legs behind their heads and curling up into jaw-dropping positions.
 

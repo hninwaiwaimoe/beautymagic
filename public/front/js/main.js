@@ -18,7 +18,50 @@ function setColor(btn, color){
             }
         }
         
+        
 
+
+
+        $('document').ready(function(){
+            $('#cal').click(function(){
+            var f=parseInt($('#heightf').val());
+            var i=parseInt($('#heighti').val());
+            var pound=parseInt($('#weightp').val());
+
+            var h=f*12+i;
+            var height=h*h;
+            console.log(height);
+            var data=$('#tbody');
+            var ff=((pound/height)*703).toFixed(3);
+            if(ff<18.5){
+                ff+=`<tr>
+            <td>Below 18.5</td>
+            <td>Underweight</td>
+        </tr>`;
+                /*alert("Underweight");*/
+            }else if (ff>=18.5 && ff<=24.9) {
+                ff+=`<tr>
+            <td>18.5-24.9</td>
+            <td>Normal</td>
+        </tr>`;
+                /*alert("Normal weight");*/
+            }else if (ff>=25 && ff<=29.9) {
+                ff+=`<tr>
+            <td>25.0-29.9</td>
+            <td>Overweight</td>
+        </tr>`;
+                /*alert("Overweight");*/
+            }else{
+                ff+=`<tr>
+            <td>30.0 and Above</td>
+            <td>Obese</td>
+        </tr>`;
+                /*alert("Obesity");*/
+            }
+            data.html(ff);
+            })
+        })
+    
 'use strict';
 
 (function ($) {

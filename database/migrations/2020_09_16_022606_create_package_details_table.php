@@ -18,18 +18,14 @@ class CreatePackageDetailsTable extends Migration
             $table->unsignedBigInteger('food_id');
             $table->unsignedBigInteger('package_id');
             $table->string('kind');
-            $table->integer('qty');
-            $table->string('bmi');
             $table->timestamps();
-
-            $table->foreign('food_id')
-                    ->references('id')
-                    ->on('food')
-                    ->onDelete('cascade');
-
             $table->foreign('package_id')
                     ->references('id')
                     ->on('packages')
+                    ->onDelete('cascade');
+             $table->foreign('food_id')
+                    ->references('id')
+                    ->on('food')
                     ->onDelete('cascade');
         });
     }

@@ -38,7 +38,6 @@ class FoodTypeController extends Controller
     {
          $request->validate([
             "name" => 'required',
-            "unit" => 'required',
             
         ]);
         
@@ -46,7 +45,7 @@ class FoodTypeController extends Controller
 
         $foodtype =new FoodType;
         $foodtype->name = $request->name;
-        $foodtype->unit = $request->unit;
+        
         
        
         $foodtype->save();
@@ -56,9 +55,9 @@ class FoodTypeController extends Controller
     }
 
     /**
+     * @param  \App\FoodType  $foodType
      * Display the specified resource.
      *
-     * @param  \App\FoodType  $foodType
      * @return \Illuminate\Http\Response
      */
     public function show(FoodType $foodType)
@@ -90,7 +89,7 @@ class FoodTypeController extends Controller
     {
          $request->validate([
             "name" => 'required',
-            "unit" => 'required',
+            
             
         ]);
         
@@ -98,7 +97,7 @@ class FoodTypeController extends Controller
 
        $foodtype = FoodType::find($id);
         $foodtype->name = $request->name;
-        $foodtype->unit = $request->unit;
+       
         
        
         $foodtype->save();
@@ -113,8 +112,10 @@ class FoodTypeController extends Controller
      * @param  \App\FoodType  $foodType
      * @return \Illuminate\Http\Response
      */
-    public function destroy(FoodType $foodType)
+    public function destroy(FoodType $foodType,$id)
     {
-        //
+        $foodType = FoodType::find($id);
+        $foodType->delete();
+        return redirect()->route('foodtypes.index'); 
     }
 }

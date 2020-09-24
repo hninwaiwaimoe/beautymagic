@@ -15,11 +15,15 @@ class CreateFoodTable extends Migration
     {
         Schema::create('food', function (Blueprint $table) {
             $table->id();
-             $table->string('name');
+            $table->string('name');
+            $table->unsignedBigInteger('foodtype_id');
             $table->integer('kalorie');
             $table->string('vitamin');
-
             $table->timestamps();
+            $table->foreign('foodtype_id')
+                  ->references('id')
+                  ->on('food_types')
+                  ->onDelete('cascade');
         });
     }
 

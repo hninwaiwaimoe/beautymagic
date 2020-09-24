@@ -3,8 +3,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Foodtype;
 use App\Package;
-
-
+use DB;
+use App\Plan;
   class PageController extends Controller
 {
       public function mainfun($value='')
@@ -69,12 +69,27 @@ use App\Package;
   }
    public function planfun($value='')
   {
-    return view('frontend.plan');
+    $plans = Plan::all();
+    return view('frontend.plan',compact('plans'));
   }
   public function bmifun($value='')
   {
     return view('frontend.bmi');
   }
+   public function exercisefun($value='')
+  {
+    return view('frontend.exercise');
+  }
+   public function dietplanfun($value='')
+  {
+    return view('frontend.dietplan');
+  }
+   public function packagedetail($id)
+    {
+       $packagedetail = Package::take(1)->find($id);
+       return view('backend.Packagedetails.index',compact('packagedetail'));
+    }
+
 
 
     /**
@@ -148,5 +163,43 @@ use App\Package;
     public function destroy($id)
     {
         //
+    }
+
+    public function planpackage($id)
+    {
+      $plan  = Plan::whereHas('packages',function($q) use ($id){
+        $q->where('id',$id);
+      })->get();
+
+      if($plan[0]->name == 'food plan'){
+      $packages = Package::where('id',$id)->first();
+
+      return view('frontend.dietplan',compact('packages'));
+    }else{
+      $packages = Package::where('id',$id)->get();
+
+      return view('frontend.exercise',compact('packages'));
+    }
+    }
+
+    public function morepackage($id)
+    {
+      $pid = Package::find($id);
+     /*$count = Package::find($id)->foods()->inRandomOrder()->limit(36)->get();
+
+      dd($count);*/
+
+      if($pid->duration == 10){
+        $packages = $pid->foods;
+       return view('frontend.morepackage',compact('packages','pid'));
+      }elseif($pid->duration == 5){
+        $packages = $pid->foods;
+        return view('frontend.morepackage',compact('packages','pid'));
+      }
+      else{
+        dd($pid);
+        $packages = $pid->foods;
+       return view('frontend.morepackage',compact('packages'));
+      }
     }
 }

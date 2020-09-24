@@ -9,7 +9,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
-				<form action="{{route('packages.update',$packages->id)}}" method="POST" enctype="multipart/form-data">
+				<form action="{{route('packages.update',$package->id)}}" method="POST" enctype="multipart/form-data">
 					{{-- to update , need id  --}}
 					@csrf
 					@method('PUT')
@@ -19,7 +19,7 @@
 						<label class="col-sm-2 col-form-label">Name</label>
 						<div class="col-sm-5">
 
-							<input type="text" name="name" class="form-control" value="{{$category->name}}">
+							<input type="text" name="name" class="form-control" value="{{$package->name}}">
 						</div>
 					</div>
 					<div class="form-group row">
@@ -30,10 +30,10 @@
 						</div>
 					</div>
 					<div class="form-group row">
-						<label class="col-sm-2 col-form-label">Project_id</label>
+						<label class="col-sm-2 col-form-label">Price</label>
 						<div class="col-sm-5">
 
-							<input type="text" name="project_id" class="form-control" value="">
+							<input type="text" name="price" class="form-control" value="{{$package->price}}">
 						</div>
 					</div>
 

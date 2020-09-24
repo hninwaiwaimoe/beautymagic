@@ -1,8 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Plan;
 use App\Package;
+use App\Food;
 use Illuminate\Http\Request;
 
 class PackageController extends Controller
@@ -25,7 +26,9 @@ class PackageController extends Controller
      */
     public function create()
     {
-        return view('backend.Packages.create');
+        $plans=Plan::all();
+        $foods = Food::all();
+        return view('backend.Packages.create',compact('plans','foods'));
     }
 
     /**
@@ -38,9 +41,11 @@ class PackageController extends Controller
     {
         $request->validate([
             "name" => 'required',
-            "duration" => 'duration',
-            "plan_id" => 'Plan_id'
-            
+            "duration" => 'required',
+            "price" => 'required',
+            "food" => 'required',
+            "kmd" => 'required',
+            'plan' => 'required'
         ]);
         
         //datainsert
@@ -48,14 +53,26 @@ class PackageController extends Controller
         $package =new Package;
         $package->name = $request->name;
         $package->duration = $request->duration;
-        
-
-        $package->plan_id =$request->package;
-       
+        $package->price =$request->price;
+        $package->plan_id = $request->plan;
         $package->save();
 
+        $foods = request('food');
+    $kmd = request('kmd');
+    
+    //dd(count($request->subject)+1);
+    for ($i=0; $i < count($request->food); $i++) { 
+      //$v = $request->subject[$i];
+      /*if(is_array($request->price)){
+        $b = $request->price[$i];
+        $teacher->subjects()->attach($v,['price'=>$b]);
+      }*/
+      $array = [ $request->food[$i] => ['kind'=>$request->kmd[$i+1]]];
+      $package->foods()->attach($array);
+    }
+
         //redirect
-        return redirect()->route('Packages.index');
+        return redirect()->route('packages.index');
     }
 
     /**
@@ -64,9 +81,10 @@ class PackageController extends Controller
      * @param  \App\Package  $package
      * @return \Illuminate\Http\Response
      */
-    public function show(Package $package)
+    public function show($id)
     {
-        //
+          $packagedetails=Package::find($id);
+        return view('backend.packagedetail.index',compact('packagedetails'));
     }
 
     /**
@@ -77,8 +95,8 @@ class PackageController extends Controller
      */
     public function edit(Package $package)
     {
-        $packages = Package::all();
-        return view('bqaackend.Packages.edit',compact('packages'));
+    
+        return view('backend.Packages.edit',compact('package'));
     }
 
     /**
@@ -92,24 +110,22 @@ class PackageController extends Controller
     {
         $request->validate([
             "name" => 'required',
-            "duration" => 'duration',
-            "plan_id" => 'Plan_id'
+            "duration" => 'required',
+            "price" => 'required'
             
         ]);
         
         //datainsert
-
-        $package =new Package;
         $package->name = $request->name;
         $package->duration = $request->duration;
         
 
-        $package->plan_id =$request->package;
+        $package->price =$request->price;
        
-        $package->save();vjj
+        $package->save();
 
         //redirect
-        return redirect()->route('Packages.index');
+        return redirect()->route('packages.index');
     }
 
     /**
@@ -120,6 +136,7 @@ class PackageController extends Controller
      */
     public function destroy(Package $package)
     {
-        //
+        $package->delete();
+        return redirect()->route('packages.index');
     }
 }

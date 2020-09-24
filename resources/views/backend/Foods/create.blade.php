@@ -19,7 +19,20 @@
 		</div>
 	</div>
 	<div class="form-group row">
-		<label for="kalorie" class="col-sm-2 col-form-label">Kalorie</label>
+		<label for="name" class="col-sm-2 col-form-label">Foodtype_id</label>
+		<div class="col-sm-8">
+			<select class="form-control form-control-md" id="" name="foodtype">
+				<optgroup label="Choose Foodtype_id">
+					@foreach($foodtypes as $foodtype_id)
+					<option value="{{$foodtype_id->id}}">{{$foodtype_id->name}}</option>
+					@endforeach
+				</optgroup>
+			</select>
+			{{-- <span class="text-danger">{{$error->first('name')}}</span> --}}
+		</div>
+	</div>
+	<div class="form-group row">
+		<label for="kalorie" class="col-sm-2 col-form-label">Calorie</label>
 		<div class="col-sm-8">
 			<input type="text" class="form-control" id="kalorie" name="kalorie">
 			{{-- <span class="text-danger">{{$error->first('photo')}}</span> --}}

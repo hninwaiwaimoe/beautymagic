@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Package_detail;
 use Illuminate\Http\Request;
-
+use App\Package;
 class PackageDetailController extends Controller
 {
     /**
@@ -108,5 +108,11 @@ class PackageDetailController extends Controller
     public function destroy(Package_detail $package_detail)
     {
         //
+    }
+
+    public function buypackage($id){
+       $packages = Package::where('plan_id',$id)->get();
+       return view('frontend.buypackage',compact('packages'));
+
     }
 }

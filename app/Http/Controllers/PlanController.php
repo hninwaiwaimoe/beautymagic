@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Plan;
+use App\Food;
+use App\Package;
 use Illuminate\Http\Request;
 
 class PlanController extends Controller
@@ -25,7 +27,9 @@ class PlanController extends Controller
      */
     public function create()
     {
-        return view('backend.plans.create');
+         $foods=Food::all();
+         $packages = Package::all();
+        return view('backend.plans.create',compact('foods','packages'));
     }
 
     /**
@@ -38,18 +42,16 @@ class PlanController extends Controller
     {
          $request->validate([
             "name" => 'required',
-            "description" => 'required',
-            
+            'description' => 'required',
             
         ]);
         
         //datainsert
 
         $plan =new Plan;
-        $plan->name = $request->name;
+        $plan->name =$request->name;
         $plan->description = $request->description;
-        
-       
+    
         $plan->save();
 
         //redirect
@@ -75,8 +77,9 @@ class PlanController extends Controller
      */
     public function edit(Plan $plan)
     {
-        $plans = Plan::all();
-        return view('backend.plans.edit',compact('plans'));
+       $foods = Food::all();
+       $packages = Package::all();
+        return view('backend.plans.edit',compact('plan','foods','packages'));
     }
 
     /**
@@ -89,23 +92,22 @@ class PlanController extends Controller
     public function update(Request $request, Plan $plan)
     {
          $request->validate([
-            "name" => 'required',
+            'name' => 'required',
             "description" => 'required',
-            
+                      
             
         ]);
         
         //datainsert
-
-        $plan =new Plab;
-        $plan->name = $request->name;
+       $plan->name =$request->name;
         $plan->description = $request->description;
+
         
        
         $plan->save();
 
         //redirect
-        return redirect()->route('Plans.index');
+        return redirect()->route('plans.index');
     }
 
     /**
@@ -116,6 +118,7 @@ class PlanController extends Controller
      */
     public function destroy(Plan $plan)
     {
-        //
+       $plan->delete();
+        return redirect()->route('plans.index');
     }
 }

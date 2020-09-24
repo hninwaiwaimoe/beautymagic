@@ -1,17 +1,18 @@
 @extends('layouts.app')
 
 @section('content')
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">{{ __('Login') }}</div>
 
-<div class="container-login100" style="background-image: url('images/bg-01.jpg');">
-		<div class="wrap-login100 p-l-55 p-r-55 p-t-80 p-b-30">
-			<form method="POST" action="{{ route('login') }}">
+                <div class="card-body">
+                    <form method="POST" action="{{ route('login') }}">
                         @csrf
-	<span class="login100-form-title p-b-37">
-					Sign In
-				</span>
 
-				<div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail') }}</label>
+                        <div class="form-group row">
+                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
 
                             <div class="col-md-6">
                                 <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
@@ -63,9 +64,10 @@
                                 @endif
                             </div>
                         </div>
-			</form>
-
-			
-		</div>
-	</div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 @endsection

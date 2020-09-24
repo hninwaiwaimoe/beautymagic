@@ -15,4 +15,11 @@
 	<input type="button" id="button" value="Click Here for Yoga Plan" style="color: black" onclick="setColor('button','#101010')";/>
 	</div><br><br>
 </div>
+@foreach($plans as $plan)
+<div align="center">
+		<a href="{{route('buypackage',$plan->id)}}">
+		<button class="btn">{{$plan->name}}</button></a>
+	</div>
+	@endforeach
+	
 @endsection

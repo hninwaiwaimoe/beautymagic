@@ -22,18 +22,30 @@
 							<input type="text" name="name" class="form-control" value="{{$food->name}}">
 						</div>
 					</div>
-										<div class="form-group row">
-						<label class="col-sm-2 col-form-label" for="kalorie">Kalorie</label>
+					<div class="form-group row">
+						<label class="col-sm-2 col-form-label" for="food_id">Foodtype_id</label>
 						<div class="col-sm-5">
 
-							<input type="text" name="kalorie" class="form-control" value="{{$food->kalorie}}">
+							<select name="foodtype" class="form-control">
+								<option selected disabled>Choose Food Type</option>
+								@foreach($foodtypes as $foodtype)
+								<option value="{{$foodtype->id}}" <?php if($foodtype->id == $food->foodtype_id) echo "selected";?>>{{$foodtype->name}}</option>
+								@endforeach
+							</select>
+						</div>
+					</div>
+						<div class="form-group row">
+						<label class="col-sm-2 col-form-label" for="kalorie">Calorie</label>
+						<div class="col-sm-5">
+
+							<input type="number" name="kalorie" class="form-control" value="{{$food->kalorie}}">
 						</div>
 					</div>
 										<div class="form-group row">
 						<label class="col-sm-2 col-form-label" for="vitamin">Vitamin</label>
 						<div class="col-sm-5">
 
-							<input type="text" name="vitamin" class="form-control" value="{{$food->vitamin}}">
+							<input type="number" name="vitamin" class="form-control" value="{{$food->vitamin}}">
 						</div>
 					</div>
 
